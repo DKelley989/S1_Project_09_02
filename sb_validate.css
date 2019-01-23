@@ -13,14 +13,17 @@
 
 
 /* Validation Styles */
+/* This style affects input elements that do not have the type attribute value of "radio" and have the focus to change the background color to rgb(255, 218, 165). */
 input:not([type='radio']):focus {
     background-color: rgb(255, 218, 165);
 }
 
+/* This style affects input elements that do not have the type attribute value of "radio" that have focus and are valid to change the background color to rgb(215, 255, 215) and displays the image "sb_valid.png" in the right edge of the input box with no tiling. */
 input:not([type='radio']):focus:valid {
     background: rgb(215, 255, 215) url(sb_valid.png) right/contain no-repeat;
 }
 
+/* This style affects input elements that do not have the type attribute value of "radio" that have focus and are invalid to change the background color to rgb(255, 245, 215) and displays the image "sb_invalid.png" in the right edge of the input box with no tiling. */
 input:not([type='radio']):focus:invalid {
     background: rgb(255, 245, 215) url(sb_invalid.png) right/contain no-repeat;
 }

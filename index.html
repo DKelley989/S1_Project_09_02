@@ -52,6 +52,7 @@
 
         <!-- Payment Form -->
         <form id="payment" action="http://www.example.com/sb/payment " method="POST">
+            <!-- Billing fieldset -->
             <fieldset id="billing">
                 <legend>Billing Information (required)</legend>
                 <!-- Input 1 - First Name -->
@@ -82,7 +83,7 @@
                 <label for="phone">Phone</label>
                 <input type="tel" name="phone" id="phoneBox" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
 
-                <!-- List of States -->
+                <!-- List of state abbreviations -->
                 <datalist id="stateList">
                     <option value="AL" />
                     <option value="AK" />
@@ -136,9 +137,12 @@
                     <option value="WY" />
                 </datalist>
             </fieldset>
+            <!-- Billing fieldset end -->
 
+            <!-- Credit card fieldset -->
             <fieldset id="creditCard">
                 <legend>Credit Card (required)</legend>
+                <!-- Credit card type fieldset -->
                 <fieldset>
                     <label for="cCard" class="cardLabel">
                         <input type="radio" name="cCard" value="amex" required />
@@ -157,12 +161,15 @@
                         <img src="sb_visa.png" alt="Visa">
                     </label>
                 </fieldset>
+                <!-- Credit card type fieldset end -->
 
                 <label for="cardBox">Credit Card Number</label>
+                <!-- Credit card number input -->
                 <input type="text" name="cardNumber" id="cardBox" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
                     required />
 
                 <label for="monthList">Expiration Date</label>
+                <!-- Selection list of monthts -->
                 <select name="cardMonth" id="monthList" required>
                     <option value="">--Month--</option>
                     <option value="1">January (01)</option>
@@ -178,6 +185,7 @@
                     <option value="11">November (11)</option>
                     <option value="12">December (12)</option>
                 </select>
+                <!-- Selection list of year -->
                 <select name="cardYear" id="yearList" required>
                     <option value="">--Year--</option>
                     <option value="2017">2017</option>
@@ -194,6 +202,7 @@
                     <img src="sb_button.png" alt="Next" />
                 </button>
             </fieldset>
+            <!-- Credit card fieldset end -->
         </form>
         <!-- Payment Form end -->
 
